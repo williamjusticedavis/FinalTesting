@@ -1,6 +1,9 @@
 const express = require('express');
 const indexRoute = require('./routes/indexRoute')
+require("./db/dbConnect")
+
 const app = express();
+app.use(express.json())
 
 const port = process.env.PORT || 3001;
 
